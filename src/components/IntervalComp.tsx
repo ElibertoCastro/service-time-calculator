@@ -17,9 +17,6 @@ interface IntervalCompProps {
 export function IntervalComp({ interval, updateIntervals }: IntervalCompProps) {
   const [startDate, setStartDate] = useState(formatDate(new Date()));
   const [endDate, setEndDate] = useState(formatDate(new Date()));
-  // const [years, setYears] = useState(0);
-  // const [months, setMonths] = useState(0);
-  // const [days, setDays] = useState(0);
 
   useEffect(() => {
     const totalDays = calculateTotalDaysBetweenDates(startDate, endDate);
@@ -40,7 +37,7 @@ export function IntervalComp({ interval, updateIntervals }: IntervalCompProps) {
 
   return (
     <div>
-      <fieldset className="border-1 flex gap-4 flex-wrap items-center border-purple-200 rounded px-2 py-3 shadow-sm">
+      <fieldset className="border-1 flex gap-4 flex-wrap items-center border-purple-200 rounded text-sm lg:text-base px-2 py-3 shadow-sm">
         <legend>{`Intervalo ${interval.order}`}</legend>
 
         <section className="flex  items-center justify-center gap-8 flex-row  p-4">

@@ -19,7 +19,7 @@ export function InputDate({
       <input
         className="text-center bg-violet-100 border border-violet-300 rounded-lg px-4 py-2 shadow-sm 
          focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500 
-         transition-all duration-200 w-max"
+         transition-all duration-200"
         type="date"
         id={label}
         value={date}
