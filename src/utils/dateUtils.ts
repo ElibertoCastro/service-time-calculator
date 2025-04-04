@@ -12,7 +12,7 @@ export function calculateTotalDaysBetweenDates(
   const diffInMilliseconds = end.getTime() - start.getTime();
   const diffInDays = diffInMilliseconds / (1000 * 60 * 60 * 24); // 1 day = 86.400.000 ms
 
-  return Math.abs(diffInDays);
+  return Math.abs(diffInDays + 1); //Inclusive of start and end date
 }
 
 export function calculateYearsByTotalDays(totalDays: number): number {
