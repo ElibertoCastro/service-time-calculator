@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -52,3 +53,7 @@ export default tseslint.config({
   },
 })
 ```
+=======
+# service-time-calculator
+Calculadora de tempo de serviço
+>>>>>>> bb59657e01933004a70de7d60e272e8ea2be6d7e
