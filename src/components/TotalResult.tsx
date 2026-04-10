@@ -31,7 +31,7 @@ export function TotalResults({ intervals }: TotalResultsProps) {
         </p>
 
         <p className="text-sm md:text-base text-slate-600">
-          {`Total de dias computados: ${totalDays}`}
+          {`Total de dias computados: ${totalDays.toLocaleString("pt-BR")}`}
         </p>
 
         <p className="mt-2 max-w-lg text-xs leading-5 text-slate-500">

@@ -61,7 +61,7 @@ export function IntervalComp({ interval, updateIntervals }: IntervalCompProps) {
 
           <aside className="rounded-lg border border-emerald-100 bg-emerald-50/60 px-4 py-3 text-sm text-slate-700">
             <p className="font-medium text-slate-800">
-              {`Total de dias: ${interval.totalDays}`}
+              {`Total de dias: ${interval.totalDays.toLocaleString("pt-BR")}`}
             </p>
             <p className="mt-1 text-slate-600">
               {`${interval.years} anos, ${interval.months} meses, ${interval.days} dias`}
