@@ -12,14 +12,13 @@ export function InputDate({
   className = "",
 }: InputDateProps) {
   return (
-    <div className={`lg:text-md flex flex-col gap-1` + className}>
-      <label htmlFor={label} className="font-semibold text-gray-800">
+    <div className={`flex flex-col gap-1 text-sm md:text-base ${className}`}>
+      <label htmlFor={label} className="font-semibold text-slate-700">
         {label}
       </label>
+
       <input
-        className="text-center bg-violet-100 border border-violet-300 rounded-lg px-4 py-2 shadow-sm 
-         focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500 
-         transition-all duration-200"
+        className="min-w-[180px] rounded-md border border-slate-300 bg-slate-50 px-4 py-2 text-center text-slate-800 shadow-sm transition-all duration-200 focus:bg-white focus:border-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-200"
         type="date"
         id={label}
         value={date}

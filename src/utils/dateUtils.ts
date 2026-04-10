@@ -4,7 +4,7 @@ export function formatDate(date: Date): string {
 
 export function calculateTotalDaysBetweenDates(
   startDate: string,
-  endDate: string
+  endDate: string,
 ) {
   const start = new Date(startDate);
   const end = new Date(endDate);
@@ -22,13 +22,13 @@ export function calculateYearsByTotalDays(totalDays: number): number {
 
 export function calculateMonthsByTotalDays(totalDays: number): number {
   const years = totalDays % 365;
-  const months = Math.floor(years / 30.44);
+  const months = Math.floor(years / 30);
   return months;
 }
 
 export function calculateDaysByTotalDays(totalDays: number): number {
   const years = totalDays % 365;
-  const months = years % 30.44;
+  const months = years % 30;
   const days = Math.floor(months);
   return days;
 }
