@@ -1,4 +1,4 @@
-import { IoLogoLinkedin } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -11,13 +11,13 @@ export function Footer() {
         <p className="mt-1 text-xs text-emerald-100/60">
           Desenvolvido por{" "}
           <a
-            href="https://www.linkedin.com/in/elibertocastro/"
+            href="https://github.com/ElibertoCastro/service-time-calculator"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 font-medium text-emerald-200 transition-colors hover:text-white hover:underline"
           >
             Eliberto Castro
-            <IoLogoLinkedin className="text-sm" />
+            <FaGithub className="text-sm" />
           </a>
         </p>
       </div>

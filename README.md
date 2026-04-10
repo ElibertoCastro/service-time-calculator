@@ -1,59 +1,113 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Calculadora de Tempo de Serviço
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19+-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4+-06B6D4?logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite&logoColor=white)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-16a34a)
 
-Currently, two official plugins are available:
+Aplicação web desenvolvida para calcular **tempo de serviço** a partir de **múltiplos intervalos de datas**, exibindo tanto o total individual de cada período quanto o total consolidado de todos os intervalos informados.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Acesse o projeto
 
-## Expanding the ESLint configuration
+- **Deploy:** https://service-time-calculator.vercel.app/
+- **Repositório:** https://github.com/elibertocastro/service-time-calculator
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Motivação
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Este projeto foi criado para ajudar pessoas que precisavam encontrar uma ferramenta web capaz de:
+
+- calcular períodos com base em intervalos de datas;
+- exibir o total individual de cada intervalo;
+- apresentar o total geral de todos os intervalos informados.
+
+A proposta foi desenvolver uma solução simples, objetiva e acessível, com foco em praticidade, clareza visual e boa experiência de uso.
+
+## Funcionalidades
+
+- Adição de múltiplos intervalos de datas
+- Remoção do último intervalo adicionado
+- Cálculo automático do total de dias por intervalo
+- Exibição do resultado individual de cada período em:
+  - anos
+  - meses
+  - dias
+- Exibição do resultado total consolidado de todos os intervalos
+- Exibição do total geral de dias computados
+- Interface responsiva
+- Visual sóbrio e profissional, com identidade inspirada em tons institucionais
+
+## Regras de cálculo
+
+O projeto considera as seguintes regras:
+
+- A contagem do período é **inclusiva**
+  - quando a data inicial e a data final são iguais, o resultado é **1 dia**
+- Para conversão do total de dias:
+  - **1 ano = 365 dias**
+  - **1 mês = 30 dias**
+
+> **Observação:** o app considera anos de 365 dias e meses de 30 dias para fins de conversão do total de dias.
+
+## Tecnologias utilizadas
+
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Vite**
+
+## Layout e proposta visual
+
+A interface foi pensada para transmitir:
+
+- sobriedade;
+- legibilidade;
+- simplicidade de uso;
+- aparência institucional e profissional.
+
+A paleta visual foi ajustada para tons mais neutros e verdes, buscando uma identidade mais alinhada ao contexto institucional do projeto.
+
+## Estrutura do projeto
+
+```bash
+src/
+├── components/
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── InputDate.tsx
+│   ├── IntervalComp.tsx
+│   └── TotalResult.tsx
+├── utils/
+│   └── dateUtils.ts
+├── App.tsx
+└── main.tsx
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Como usar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clique em **Adicionar** para inserir um novo intervalo.
+2. Informe a **data de início** e a **data de fim**.
+3. O sistema calculará automaticamente:
+   - o total de dias do intervalo;
+   - a conversão em anos, meses e dias.
+4. Adicione quantos períodos desejar.
+5. Consulte o bloco de **resultado total** para visualizar:
+   - o total consolidado em anos, meses e dias;
+   - o total geral de dias computados.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-=======
-# service-time-calculator
-Calculadora de tempo de serviço
->>>>>>> bb59657e01933004a70de7d60e272e8ea2be6d7e
+## Melhorias futuras
+
+- validação para impedir data final anterior à data inicial;
+- remoção de intervalos específicos;
+- edição individual de intervalos;
+- persistência dos dados no navegador;
+- exportação dos resultados;
+- suporte a diferentes regras de contagem de tempo;
+- possibilidade de tema escuro.
+
+## Autor
+
+Desenvolvido por **Eliberto Castro**.
+
+- **LinkedIn:** [seu-linkedin](https://www.linkedin.com/in/elibertocastro)
