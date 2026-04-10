@@ -110,4 +110,4 @@ src/
 
 Desenvolvido por **Eliberto Castro**.
 
-- **LinkedIn:** [seu-linkedin](https://www.linkedin.com/in/elibertocastro)
+- **LinkedIn:** [Eliberto Castro](https://www.linkedin.com/in/elibertocastro)
