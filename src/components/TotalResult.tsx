@@ -1,4 +1,4 @@
-import { Interval } from "../App";
+import { Interval } from "../components/CalculateIntevals";
 import {
   calculateDaysByTotalDays,
   calculateMonthsByTotalDays,
